@@ -23,7 +23,9 @@ async def create_upload_files(video: UploadFile = File(...), audio: UploadFile =
          'content-type': audio.content_type}
     ]
 
-    return uploadedTemplate.render(content=content)
+    return HTMLResponse(
+        content=uploadedTemplate.render(content=content)
+    )
 
 
 @app.get("/")
