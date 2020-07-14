@@ -3,7 +3,7 @@ from fastapi import FastAPI, File, Form, UploadFile
 from fastapi.responses import HTMLResponse
 
 from templates import home as homeTemplate, uploaded as uploadedTemplate
-from jinja2 import Template
+from app.editing import syncToVideo
 
 app = FastAPI()
 
@@ -23,15 +23,17 @@ async def create_upload_files(video: UploadFile = File(...), audio: UploadFile =
          'content-type': audio.content_type}
     ]
 
+    # TODO create a streaming response
+
     return HTMLResponse(
-        content=uploadedTemplate.render(content=content)
+        content=uploadedTemplate.render(content=content, heading="You can stream the video below:")
     )
 
 
 @app.get("/")
 async def root():
-    print(homeTemplate.render(greeting='Welcome back'), type(homeTemplate.render(greeting='Welcome back')), flush=True)
-
+    """Returns a form ready for submitting your video and audio to automatically sync them :D
+    """
     content = homeTemplate.render(greeting='Welcome back')
     response = HTMLResponse(content=content)
 
