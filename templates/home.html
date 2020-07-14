@@ -1,0 +1,89 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Simply</title>
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+<body>
+    <style>
+        @font-face {
+          font-family: libreFranklin;
+          src: url(/templates/fonts/libreFranklin/LibreFranklin-Medium.ttf);
+    }
+    h1 {
+    text-align: center;
+    font-family: libreFranklin;
+    font-size: 3rem;
+    height: 15vh;
+    margin: 6vh 0;
+    }
+    form > div {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+
+        margin-top: 3vh;
+        width: 61.8vw;
+        margin-left: 19.1vw;
+        align-items: center;
+    }
+    input[type=file] {
+        background-color: #49a9fc;
+        font-size: 1.3rem;
+        border-radius: 9px;
+        padding: .6vw;
+        width: 60%;
+    }
+    input[type=submit] {
+        border: none;
+        border-radius: 2px;
+        color: white;
+        background-color: #49a9fc;
+        padding: .6vw;
+        margin: 3vw 37.5%;
+        width: 25%;
+        font-size: 1.8rem;
+    }
+    input[type=submit]:hover {
+        cursor: pointer;
+    }
+    input[type=file]:hover {
+        cursor: pointer;
+    }
+    label {
+        font-size: 1.3rem;
+        float: left;
+        padding: 1vw;
+        width: 30%;
+        font-family: sans;
+        text-align: right;
+        margin-right: 3%;
+    }
+    form > * {
+        display: inline-block;
+        margin: 3vw;
+    }
+    </style>
+<div class="form_container">
+    <h1>{{ greeting }}</h1>
+
+    <form action="/uploaded/" enctype="multipart/form-data" method="post">
+    <div>
+        <label for="video">Original Video</label><input name="video" type="file">
+    </div>
+        <div>
+        <label for="audio">Enhanced Audio</label><input name="audio" type="file">
+    </div>
+        <input type="submit" value="Edit">
+    </form>
+</div>
+
+</body>
+</html>

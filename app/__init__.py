@@ -2,10 +2,13 @@ from typing import List
 from fastapi import FastAPI, File, Form, UploadFile
 from fastapi.responses import HTMLResponse
 
+from templates import home as homeTemplate, uploaded as uploadedTemplate
+from jinja2 import Template
+
 app = FastAPI()
 
 
-@app.post("/uploadfiles/")
+@app.post("/uploaded/")
 async def create_upload_files(video: UploadFile = File(...), audio: UploadFile = File(...)):
     """
     :arg video is the video clip we edit by replacing the audio with the second argument, and syncing
@@ -20,21 +23,17 @@ async def create_upload_files(video: UploadFile = File(...), audio: UploadFile =
          'content-type': audio.content_type}
     ]
 
-    return content
+    return HTMLResponse(
+        content=uploadedTemplate.render(content=content)
+    )
 
 
 @app.get("/")
-async def main():
+async def root():
+    print(homeTemplate.render(greeting='Welcome back'), type(homeTemplate.render(greeting='Welcome back')), flush=True)
 
-    content = """
-<body>
+    content = homeTemplate.render(greeting='Welcome back')
+    response = HTMLResponse(content=content)
 
-<form action="/uploadfiles/" enctype="multipart/form-data" method="post">
-<input name="video" type="file">
-<input name="audio" type="file">
-<input type="submit">
-</form>
-</body>
-    """
-    return HTMLResponse(content=content)
+    return response
 
