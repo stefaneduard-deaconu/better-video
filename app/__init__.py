@@ -1,26 +1,37 @@
 from typing import List
-from fastapi import FastAPI, File, UploadFile
+from fastapi import FastAPI, File, Form, UploadFile
 from fastapi.responses import HTMLResponse
 
 app = FastAPI()
 
 
 @app.post("/uploadfiles/")
-async def create_upload_files(files: List[UploadFile] = File(...)):
-    return {"filenames": [file.filename for file in files]}
+async def create_upload_files(video: UploadFile = File(...), audio: UploadFile = File(...)):
+    """
+    :arg video is the video clip we edit by replacing the audio with the second argument, and syncing
+    :arg audio is the better audio file we want to keep in the video
+    """
+
+    content = [
+        {"video": video.filename,
+         'content-type': video.content_type},
+
+        {'audio': audio.filename,
+         'content-type': audio.content_type}
+    ]
+
+    return content
 
 
 @app.get("/")
 async def main():
-    for_files = """<form action="/files/" enctype="multipart/form-data" method="post">
-<input name="files" type="file" multiple>
-<input type="submit">
-</form>"""
+
     content = """
 <body>
 
 <form action="/uploadfiles/" enctype="multipart/form-data" method="post">
-<input name="files" type="file" multiple>
+<input name="video" type="file">
+<input name="audio" type="file">
 <input type="submit">
 </form>
 </body>

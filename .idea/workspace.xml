@@ -20,9 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ff6ede1-02b5-47ea-ba2c-d0b90917efff" name="Default Changelist" comment="Modified the README and started using pycharm community">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/better-video.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/better-video.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,5 +98,13 @@
       <screen x="50" y="27" width="1316" height="741" />
     </state>
     <state x="303" y="129" width="800" height="543" key="Vcs.Push.Dialog.v2/50.27.1316.741@50.27.1316.741" timestamp="1594738256124" />
+    <state x="507" y="178" width="392" height="446" key="chooseDestDirectoryDialog" timestamp="1594740197015">
+      <screen x="50" y="27" width="1316" height="741" />
+    </state>
+    <state x="507" y="178" width="392" height="446" key="chooseDestDirectoryDialog/50.27.1316.741@50.27.1316.741" timestamp="1594740197015" />
+    <state x="371" y="89" key="search.everywhere.popup" timestamp="1594739627742">
+      <screen x="50" y="27" width="1316" height="741" />
+    </state>
+    <state x="371" y="89" key="search.everywhere.popup/50.27.1316.741@50.27.1316.741" timestamp="1594739627742" />
   </component>
 </project>
