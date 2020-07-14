@@ -1,0 +1,35 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Simply</title>
+</head>
+<body>
+<style type="text/css">
+    h1 {
+    text-align: center;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 61.8vw;
+        margin-left: 19.1vw;
+        align-items: center;
+    }
+
+    form > * {
+        display: inline-block;
+        margin: 3vw;
+    }
+</style>
+<h1>{{ greeting }}</h1>
+    <form action="/uploaded/" enctype="multipart/form-data" method="post">
+    <input name="video" type="file"> <label for="video">Choose Video</label>
+    <input name="audio" type="file"> <label for="video">Choose Audio</label>
+    <input type="submit">
+</form>
+
+</body>
+</html>
