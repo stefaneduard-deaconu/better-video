@@ -1,6 +1,6 @@
 @font-face {
           font-family: libreFranklin;
-          src: url(templates/fonts/libreFranklin/LibreFranklin-Medium.ttf);
+          src: url(../fonts/libreFranklin/LibreFranklin-Medium.ttf);
     }
     h1 {
     text-align: center;
@@ -30,7 +30,7 @@
         padding: .6vw;
         width: 60%;
     }
-    input[type=submit] {
+    button.submit {
         border: none;
         border-radius: 2px;
         color: white;
@@ -40,7 +40,7 @@
         width: 25%;
         font-size: 1.8rem;
     }
-    input[type=submit]:hover {
+    button.submit:hover {
         cursor: pointer;
     }
     input[type=file]:hover {
@@ -58,4 +58,22 @@
     form > * {
         display: inline-block;
         margin: 3vw;
+    }
+
+    /* about the video: */
+    video:not(.preview) {
+        display: none;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    video.preview {
+        margin: 10vh;
+        display: block;
+        height: 80vh;
+        position
+    }
+    audio {
+        display: hidden;
     }
