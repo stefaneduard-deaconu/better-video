@@ -22,9 +22,10 @@
     <list default="true" id="2ff6ede1-02b5-47ea-ba2c-d0b90917efff" name="Default Changelist" comment="Modified the README and started using pycharm community">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/styles/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/styles/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scripts/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/scripts/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/static/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

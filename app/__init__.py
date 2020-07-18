@@ -1,17 +1,18 @@
-from fastapi import FastAPI, File, UploadFile
+from fastapi import FastAPI, File, UploadFile, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
 
-from templates import home as homeTemplate, uploaded as uploadedTemplate
 from app.editing import syncToVideo
 
 app = FastAPI()
 
 app.mount('/templates', StaticFiles(directory='templates'), name='templates')
+templates = Jinja2Templates(directory="templates")
 
 
 @app.post("/uploaded/")
-async def create_upload_files(video: UploadFile = File(...), audio: UploadFile = File(...)):
+async def create_upload_files(request: Request, video: UploadFile = File(...), audio: UploadFile = File(...)):
     """
     :arg video is the video clip we edit by replacing the audio with the second argument, and syncing
     :arg audio is the better audio file we want to keep in the video
@@ -27,18 +28,22 @@ async def create_upload_files(video: UploadFile = File(...), audio: UploadFile =
 
     # TODO create a streaming response
 
-    return HTMLResponse(
-        content=uploadedTemplate.render(content=content, heading="You can stream the video below:")
-    )
+    return templates.TemplateResponse('uploaded.html', {
+            'request': request,
+            "content": content,
+            "heading": "You can stream the video below"
+        })
 
 
 @app.get("/")
-async def root():
+async def root(request: Request):
     """Returns a form ready for submitting your video and audio to automatically sync them :D
     """
 
-    content = homeTemplate.render(greeting='Better Editing, Better Video ;)')
-    response = HTMLResponse(content=content)
+    response = templates.TemplateResponse('home.html', {
+        'request': request,
+        'greeting': 'Hello'
+    })
 
     return response
 
