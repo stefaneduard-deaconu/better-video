@@ -1,10 +1,13 @@
 from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
 
 from templates import home as homeTemplate, uploaded as uploadedTemplate
 from app.editing import syncToVideo
 
 app = FastAPI()
+
+app.mount('/templates', StaticFiles(directory='templates'), name='templates')
 
 
 @app.post("/uploaded/")
