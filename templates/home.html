@@ -4,7 +4,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Edit Simply</title>
+    <title>Better Video</title>
     <link rel="stylesheet" href="/templates/styles/home.css">
 </head>
 <body>
@@ -12,19 +12,19 @@
 <div class="form_container">
     <h1>{{ greeting }}</h1>
 
-    <form action="/uploaded/" enctype="multipart/form-data" method="post">
+    <form action="/" enctype="multipart/form-data" method="post">
     <div>
         <label for="video">Original Video</label><input name="video" type="file">
     </div>
         <div>
         <label for="audio">Enhanced Audio</label><input name="audio" type="file">
     </div>
-        <input type="submit" value="Edit">
+        <button class="submit" type="button">Edit</button>
     </form>
 </div>
-    <video hidden>
 
-    </video>
+    <video controls></video>
+    <audio></audio>
 
     <script src="templates/static/home.js"></script>
 </body>
