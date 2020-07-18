@@ -1,5 +1,4 @@
-from typing import List
-from fastapi import FastAPI, File, Form, UploadFile
+from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import HTMLResponse
 
 from templates import home as homeTemplate, uploaded as uploadedTemplate
@@ -34,7 +33,8 @@ async def create_upload_files(video: UploadFile = File(...), audio: UploadFile =
 async def root():
     """Returns a form ready for submitting your video and audio to automatically sync them :D
     """
-    content = homeTemplate.render(greeting='Welcome back')
+
+    content = homeTemplate.render(greeting='Better Editing, Better Video ;)')
     response = HTMLResponse(content=content)
 
     return response

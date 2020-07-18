@@ -20,10 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ff6ede1-02b5-47ea-ba2c-d0b90917efff" name="Default Changelist" comment="Modified the README and started using pycharm community">
-      <change afterPath="$PROJECT_DIR$/app/editing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/scripts/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/uploaded.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/uploaded.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/fonts/libreFranklin/OFL.txt" beforeDir="false" afterPath="$PROJECT_DIR$/templates/fonts/libreFranklin/OFL.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,11 +49,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$USER_HOME$/2_tutoring/raluca2/py" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/templates/fonts" />
     </key>
   </component>
@@ -87,6 +90,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Modified the README and started using pycharm community" />
@@ -101,10 +105,14 @@
       <screen x="50" y="27" width="1316" height="741" />
     </state>
     <state x="445" y="190" width="515" height="422" key="#com.intellij.fileTypes.FileTypeChooser/50.27.1316.741@50.27.1316.741" timestamp="1594747263158" />
-    <state x="212" y="31" width="992" height="737" key="SettingsEditor" timestamp="1594738603833">
+    <state x="491" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1594988738041">
       <screen x="50" y="27" width="1316" height="741" />
     </state>
-    <state x="212" y="31" width="992" height="737" key="SettingsEditor/50.27.1316.741@50.27.1316.741" timestamp="1594738603833" />
+    <state x="491" y="155" width="424" height="491" key="FileChooserDialogImpl/50.27.1316.741@50.27.1316.741" timestamp="1594988738041" />
+    <state x="212" y="31" width="992" height="737" key="SettingsEditor" timestamp="1595018809565">
+      <screen x="50" y="27" width="1316" height="741" />
+    </state>
+    <state x="212" y="31" width="992" height="737" key="SettingsEditor/50.27.1316.741@50.27.1316.741" timestamp="1595018809564" />
     <state x="303" y="129" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1594738256124">
       <screen x="50" y="27" width="1316" height="741" />
     </state>
